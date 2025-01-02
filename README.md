@@ -1,78 +1,164 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Getting Started with Create React App
+Here’s a **README.md** template for your Git repository. Customize it as needed to reflect your project details.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Attendance Management System
 
-In the project directory, you can run:
+This project is a **Full Stack Attendance Management System** built with a **Spring Boot** backend and a **React.js** frontend. The application allows users to manage attendance records for students, including viewing, adding, deleting, and generating reports.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+- [Endpoints](#endpoints)
+- [Screenshots](#screenshots)
+- [Future Improvements](#future-improvements)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- View attendance records by course.
+- Add new attendance records.
+- Delete existing attendance records.
+- Generate attendance reports as PDF files.
+- Responsive and user-friendly interface.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend:
+- **Java Spring Boot**
+- **PostgreSQL** (or your preferred database)
+- **REST APIs**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend:
+- **React.js**
+- **Bootstrap** for UI design
+- **Fetch API** for HTTP requests
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Setup Instructions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+Ensure you have the following installed:
+- Java 17 or higher
+- Node.js 14+ and npm
+- PostgreSQL database
+- A code editor like VS Code or IntelliJ IDEA
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Backend Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sujethlasrado/AttendanceManagement-Backend.git
+   cd attendance-management/backend-code
+   ```
 
-## Learn More
+2. Configure the database:
+   - Open `application.properties` in `src/main/resources/`.
+   - Update the database URL, username, and password:
+     ```properties
+     spring.datasource.url=jdbc:postgresql://localhost:5432/your_database
+     spring.datasource.username=your_username
+     spring.datasource.password=your_password
+     ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Build and run the backend:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   The backend server will start on `http://localhost:8080`.
 
-### Code Splitting
+### Frontend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Navigate to the `frontend` folder:
+   ```bash
+   cd attendance-management/frontend
+   ```
 
-### Analyzing the Bundle Size
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-### Making a Progressive Web App
+   The frontend will run on `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Backend REST API Endpoints
 
-### Deployment
+- **GET /api/students**: Retrieve all attendance records.
+- **POST /api/students**: Add a new attendance record.
+- **DELETE /api/students/delete/{id}**: Delete an attendance record by ID.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Frontend Routes
 
-### `npm run build` fails to minify
+- **/**: Dashboard to view attendance.
+- **/add**: Add a new attendance record.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# attendance_app
->>>>>>> 6a4ba068813a008d8d2465056fa4f0c3ce6c7f81
-=======
-# attendanceApp
->>>>>>> 4f285cd2df9006566934476afed2a5ab3abd47eb
+---
+
+## Screenshots
+
+### Login Page
+![image](https://github.com/user-attachments/assets/917741fb-0fb1-4af2-93b0-fdd61d3ee28d)
+
+
+### Dashboard
+![image](https://github.com/user-attachments/assets/df3c05e1-867d-4c93-9a55-40bb6a0f6038)
+
+![image](https://github.com/user-attachments/assets/7c48e000-70fc-4ba0-93bc-afbc806c7272)
+
+### Add Attendance
+![image](https://github.com/user-attachments/assets/14fb3e14-ed85-42db-9aba-c28c9a9aa529)
+---
+
+## Future Improvements
+
+- Implement user authentication and role-based access.
+- Add filtering and sorting options for attendance records.
+- Export reports in other formats (Excel, CSV).
+- Enhance the UI/UX design.
+
+---
+
+## Contributing
+
+1. Fork the repository.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature
+   ```
+5. Open a Pull Request.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+Feel free to replace placeholder content with the actual details and images specific to your project!
